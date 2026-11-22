@@ -124,6 +124,72 @@ Pipelining raised Fmax 62% but made latency worse — an ECP5 order book case st
 
 內文：用 `docs/ARTICLE_EN.md` 的 §3、§4 為主，附 repo 連結。
 
+## 7.1 最終版文案（建議直接用這組）
+
+### Show HN
+
+標題：
+```
+Show HN: An FPGA order book verified with mutation testing
+```
+
+內文：
+```
+I built a small limit order book prototype in SystemVerilog and spent most of
+the time on verification rather than features.
+
+It has a price ladder, best bid/ask, a Python reference model, invariants in the
+testbench, and a mutation-testing script (30 mutants, 100% after fixing two real
+gaps the tests had).
+
+Not included: per-order FIFO, queue position, feed parsing. It is one block, not
+a trading system.
+
+Two things I did not expect:
+
+- Pipelining raised Fmax from 95 to 155 MHz and made latency and throughput
+  worse (10.45 ns -> 12.94 ns).
+- At 1,024 levels a bitmap only reached 81 MHz, and moving the ladder to BRAM
+  blew up to 122% LUTs because the read-modify-write is asynchronous.
+
+All Fmax numbers are post-route estimates from Yosys + nextpnr, not sign-off.
+Feedback on the verification approach is welcome.
+
+https://github.com/chang-chinjung/fpga-order-book
+```
+
+### Reddit r/FPGA
+
+標題：
+```
+Pipelining raised Fmax 62% but made latency worse - an ECP5 order book case study
+```
+
+內文：
+```
+Small case study, numbers from Yosys + nextpnr on an ECP5-85F.
+
+A level-indexed order book core: 95.65 MHz single-stage (10.45 ns latency),
+154.58 MHz two-stage (12.94 ns), 155.86 MHz three-stage (19.25 ns). Each
+pipeline split shortened the critical path less than the cycle count grew, so
+latency and throughput both got worse. Placement seeds varied by only a few MHz,
+so it is logic depth, not placement luck.
+
+A second experiment: an occupancy bitmap with a 4-4-4 priority tree only reached
+81 MHz at 1,024 levels. The bottleneck was the wide mux that selects one word,
+not the scan. Moving the ladder to BRAM made it worse (122% LUTs) because the
+read-modify-write needs a combinational read, which prevents inference.
+
+Repo with the RTL, testbench, mutation script and the write-up:
+https://github.com/chang-chinjung/fpga-order-book
+```
+
+### 發文時機
+
+- HN：美東 08:00~10:00（台北 21:00~23:00）
+- Reddit r/FPGA：任何時間都可以，但週間白天效果好
+- 發完 2 小時內回覆每一則留言，演算法會推
+
 ## 8. Push 指令（範例）
 
 ```bash
