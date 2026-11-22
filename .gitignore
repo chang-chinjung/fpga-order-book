@@ -1,0 +1,27 @@
+# build artifacts
+build/
+obj_dir/
+*.fst
+*.vcd
+*.json
+*.config
+
+# generated stimulus / expected data
+stim.txt
+exp.txt
+stim_bitmap.txt
+exp_bitmap.txt
+stim_v11.txt
+exp_v11.txt
+coverage.dat
+*.info
+
+# python
+__pycache__/
+*.pyc
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
