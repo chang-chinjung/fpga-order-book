@@ -87,6 +87,7 @@ wsl -e bash -lc 'cd /mnt/d/.../fpga/order-book && make sim'
 ## 文章
 
 - [Pipelining raised Fmax 62% but made latency worse](https://dev.to/changchinjung/pipelining-raised-fmax-62-but-made-latency-worse-4l1l) — dev.to（英文）
+- [我把 Fmax 拉高了 62%，結果延遲變差了](https://vocus.cc/post/6b026e91fd89780001fa216c) — 方格子（中文）
 
 ## 授權
 
