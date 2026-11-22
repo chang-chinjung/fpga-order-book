@@ -96,6 +96,10 @@ covers the findings and numbers.
 - [docs/PLAN.md](docs/PLAN.md) — v0.1 / v1.1 plan
 - [docs/PUBLISH.md](docs/PUBLISH.md) — publishing checklist
 
+## Writing
+
+- [Pipelining raised Fmax 62% but made latency worse](https://dev.to/changchinjung/pipelining-raised-fmax-62-but-made-latency-worse-4l1l) — dev.to, English
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

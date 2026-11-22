@@ -84,6 +84,10 @@ wsl -e bash -lc 'cd /mnt/d/.../fpga/order-book && make sim'
 - [docs/ARTICLE_EN.md](docs/ARTICLE_EN.md) — 技術文章（英文，HN/Reddit 用）
 - [docs/PUBLISH.md](docs/PUBLISH.md) — 公開 repo 的檢查清單
 
+## 文章
+
+- [Pipelining raised Fmax 62% but made latency worse](https://dev.to/changchinjung/pipelining-raised-fmax-62-but-made-latency-worse-4l1l) — dev.to（英文）
+
 ## 授權
 
 MIT，見 [LICENSE](LICENSE)。

@@ -87,6 +87,10 @@ wsl -e bash -lc 'cd /mnt/d/.../fpga/order-book && make sim'
 - [docs/PLAN.md](docs/PLAN.md) — v0.1 / v1.1 计划
 - [docs/PUBLISH.md](docs/PUBLISH.md) — 公开仓库检查清单
 
+## 文章
+
+- [Pipelining raised Fmax 62% but made latency worse](https://dev.to/changchinjung/pipelining-raised-fmax-62-but-made-latency-worse-4l1l) — dev.to（英文）
+
 ## 许可证
 
 MIT，见 [LICENSE](LICENSE)。
