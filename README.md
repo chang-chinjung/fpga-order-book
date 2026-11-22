@@ -99,6 +99,7 @@ covers the findings and numbers.
 ## Writing
 
 - [Pipelining raised Fmax 62% but made latency worse](https://dev.to/changchinjung/pipelining-raised-fmax-62-but-made-latency-worse-4l1l) — dev.to, English
+- [我把 Fmax 拉高了 62%，結果延遲變差了](https://vocus.cc/post/6b026e91fd89780001fa216c) — Vocus, Traditional Chinese
 
 ## License
 
