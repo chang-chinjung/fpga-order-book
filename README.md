@@ -1,6 +1,6 @@
 # fpga-order-book · v0.1
 
-English | [繁體中文](README.zh-TW.md)
+English | [繁體中文](README.zh-TW.md) | [简体中文](README.zh-CN.md)
 
 A level-indexed limit order book prototype in SystemVerilog, verified with a
 Python golden model, invariants and mutation testing. The point is not feature

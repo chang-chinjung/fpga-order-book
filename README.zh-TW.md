@@ -1,6 +1,6 @@
 # fpga-order-book · v0.1
 
-[English](README.md) | 繁體中文
+[English](README.md) | 繁體中文 | [简体中文](README.zh-CN.md)
 
 一個用 Verilator 驗證的 FPGA 限價訂單簿原型（**價位聚合層級**），
 重點不是功能多，而是把「規格 → RTL → 對拍 → 突變 → 覆蓋率 → 時序」的流程走完並且留下數字。
